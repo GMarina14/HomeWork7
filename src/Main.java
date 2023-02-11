@@ -14,15 +14,15 @@ public class Main {
         System.out.println("Task 1");
         int savingsTotal = 0;
         int savingsPerMonth = 15000;
-        int month = 0;
+        int month = 1;
         int savingsGoal = 2_459_000;
 
         while (savingsTotal <= savingsGoal) {
             savingsTotal += savingsPerMonth;
-            System.out.println("Month number " + (month + 1) + ", savings amount = " + savingsTotal + " rubles.");
+            System.out.println("Month number " + month + ", savings amount = " + savingsTotal + " rubles.");
             month++;
         }
-        System.out.println("You need " + month + " months to save " + savingsTotal + " rubles.");
+        System.out.println("You need " + (month-1) + " months to save " + savingsTotal + " rubles.");
         System.out.println();
     }
 
@@ -31,18 +31,14 @@ public class Main {
         int number = 1;
         while (number <= 10) {
             System.out.print(number + " ");
-
             number++;
         }
 
         System.out.println();
-
         number--;
-
         for (; number > 0; number--) {
             System.out.print(number + " ");
         }
-
         System.out.println();
         System.out.println();
     }
@@ -122,13 +118,11 @@ public class Main {
         int friday = 3;
         int daysInMonth = 31;
 
-        for (int i = 1; i <= daysInMonth; i++) {
-            if (i % friday == 0) {
-                System.out.println("It's friday today " + i + "th. The report needs to be prepared");
-                friday += 7;
-            }
+        while(friday<=daysInMonth)
+        {
+            System.out.println("It's friday today " + friday + "th. The report needs to be prepared");
+            friday += 7;
         }
-
         System.out.println();
     }
 
